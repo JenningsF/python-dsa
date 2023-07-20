@@ -31,10 +31,6 @@ my_dll.insert(2,12)
 print("\nInsert")
 print(my_dll)
 
-# my_dll.remove(2)
-# print("\nRemove")
-# print(my_dll)
-
-# my_dll.reverse()
-# print("\nReverse")
-# print(my_dll)
+my_dll.remove(2)
+print("\nRemove")
+print(my_dll)
