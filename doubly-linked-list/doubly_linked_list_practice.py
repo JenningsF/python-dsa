@@ -27,9 +27,9 @@ my_dll.set_value(0,7)
 print("\nSet Value")
 print(my_dll)
 
-# my_dll.insert(1,3)
-# print("\nInsert")
-# print(my_dll)
+my_dll.insert(2,12)
+print("\nInsert")
+print(my_dll)
 
 # my_dll.remove(2)
 # print("\nRemove")
