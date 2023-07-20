@@ -19,9 +19,9 @@ my_dll.pop_first()
 print("\nPop and Pop First")
 print(my_dll)
 
-# print("\nGet (2)")
-# print(my_dll.get(2))
-# print(my_dll.get(2).value)
+print("\nGet (2)")
+print(my_dll.get(2))
+print(my_dll.get(2).value)
 
 # my_dll.set_value(0,2)
 # print("\nSet Value")
