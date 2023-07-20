@@ -23,9 +23,9 @@ print("\nGet (2)")
 print(my_dll.get(2))
 print(my_dll.get(2).value)
 
-# my_dll.set_value(0,2)
-# print("\nSet Value")
-# print(my_dll)
+my_dll.set_value(0,7)
+print("\nSet Value")
+print(my_dll)
 
 # my_dll.insert(1,3)
 # print("\nInsert")
