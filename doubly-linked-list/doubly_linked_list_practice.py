@@ -15,7 +15,7 @@ print("\nAppend & Prepend")
 print(my_dll)
 
 my_dll.pop()
-# my_dll.pop_first()
+my_dll.pop_first()
 print("\nPop and Pop First")
 print(my_dll)
 
