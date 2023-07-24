@@ -26,6 +26,7 @@ class Queue:
         else:
             return "None"
 
+    # create new Node and add it to the end of the Queue
     def enqueue(self, value):
         new_node = Node(value)
         if self.length == 0:
@@ -35,3 +36,17 @@ class Queue:
             self.last.next= new_node
             self.last = new_node
         self.length += 1
+
+    # remove the first Node in the Queue and return it
+    def dequeue(self):
+        if self.length == 0:
+            return None
+        temp = self.first
+        if self.length == 1:
+            self.first = None
+            self.last = None
+        else:
+            self.first = self.first.next
+            temp.next = None
+        self.length -= 1
+        return temp
