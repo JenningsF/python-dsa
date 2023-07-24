@@ -17,7 +17,7 @@ class Queue:
         new_node = Node(value)
         self.first = new_node
         self.last = new_node
-        self.height = 1
+        self.length = 1
 
     # print() method for a Queue
     def __str__(self):
@@ -25,3 +25,13 @@ class Queue:
             return self.first.print_node()
         else:
             return "None"
+
+    def enqueue(self, value):
+        new_node = Node(value)
+        if self.length == 0:
+            self.first = new_node
+            self.last = new_node
+        else:
+            self.last.next= new_node
+            self.last = new_node
+        self.length += 1
