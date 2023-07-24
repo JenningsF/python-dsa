@@ -1,10 +1,10 @@
-# class for a queue Node
+# class for a Stack Node
 class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
 
-# class for implementing a stack
+# class for implementing a Stack
 class Stack:
     def __init__(self, value):
         new_node = Node(value)
@@ -18,6 +18,7 @@ class Stack:
             print(temp.value)
             temp = temp.next
             
+    # create new Node and add it to the top of the Stack
     def push(self, value):
         new_node = Node(value)
         if self.height == 0:
@@ -27,6 +28,7 @@ class Stack:
             self.top = new_node
         self.height += 1
 
+    # remove the top Node in the Stack and return it
     def pop(self):
         if self.height == 0:
             return None
