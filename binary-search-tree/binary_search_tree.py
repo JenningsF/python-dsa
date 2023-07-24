@@ -67,6 +67,8 @@ class BinarySearchTree:
             for line in lines:
                 print(line)
 
+    # create new Node and insert it into the appropriate spot in the BST
+    # if a Node with the specified value already exists, the method will return False
     def insert(self, value):
         new_node = Node(value)
         if self.root is None:
@@ -87,9 +89,8 @@ class BinarySearchTree:
                     return True
                 temp = temp.right
 
+    # returns True/False if BST contains specified value
     def contains(self, value):
-        if self.root is None:
-            return False
         temp = self.root
         while temp is not None:
             if value < temp.value:
