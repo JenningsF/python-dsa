@@ -11,3 +11,9 @@ my_stack.push(5)
 my_stack.push(6)
 print("\nPush")
 my_stack.print_stack()
+
+# pop Node off of stack
+print("\nPopped Node")
+print(my_stack.pop().value)
+print("\nRemaining Stack")
+my_stack.print_stack()
