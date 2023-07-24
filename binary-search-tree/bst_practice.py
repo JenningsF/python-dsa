@@ -1,14 +1,14 @@
+import random
+
 from binary_search_tree import BinarySearchTree
 
 # initial constructor of a Binary Search Tree (BST)
 my_tree = BinarySearchTree()
-print(my_tree.root)
+print("\nInitial Constructor")
+my_tree.display()
 
-# insert nodes into BST
-my_tree.insert(2)
-my_tree.insert(1)
-my_tree.insert(3)
-
-print(my_tree.root.value)
-print(my_tree.root.left.value)
-print(my_tree.root.right.value)
+# insert 50 random nodes into BST
+for _ in range(15):
+    my_tree.insert(random.randint(0,100))
+print("\nInsert Nodes")
+my_tree.display()
