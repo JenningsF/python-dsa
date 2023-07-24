@@ -81,7 +81,7 @@ class DoublyLinkedList:
             self.head.prev = None
             temp.next = None
         self.length -= 1
-        return 
+        return temp
     
     # return the value of a Node at a specified index within the Doubly Linked List
     def get(self, index):
