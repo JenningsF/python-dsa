@@ -16,3 +16,7 @@ my_ht.print_table()
 print("\nGet Item")
 print(my_ht.get_item("bolts"))
 print(my_ht.get_item("nuts"))
+
+# tests keys method
+print("\nKeys")
+print(my_ht.keys())
