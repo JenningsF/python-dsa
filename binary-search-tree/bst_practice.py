@@ -23,7 +23,15 @@ print("\nInsert Nodes")
 my_tree.display()
 
 # find specific node in BST using contains
-print("\nIs 27 in the BST?")
+print("\nBasic contains")
+print("Is 27 in the BST?")
 print(my_tree.contains(27))
-print("\nIs 17 in the BST?")
+print("Is 17 in the BST?")
 print(my_tree.contains(17))
+
+# test recursive contains method
+print("\nRecursive contains")
+print("Is 27 in the BST?")
+print(my_tree.r_contains(27))
+print("Is 17 in the BST?")
+print(my_tree.r_contains(17))
