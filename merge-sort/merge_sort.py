@@ -18,5 +18,18 @@ def merge(list1, list2):
         j += 1
     return combined
 
-# test merge method
-print(merge([1,2,7,8], [3,4,5,6]))
+def merge_sort(list):
+    if len(list) == 1:
+        return list
+    mid_index = int(len(list) / 2)
+    left = merge_sort(list[:mid_index])
+    right = merge_sort(list[mid_index:])
+    return merge(left, right)
+
+
+# test merge sort
+original_list = [3,1,4,2]
+sorted_list = merge_sort(original_list)
+
+print("Original List: ", original_list)
+print("\nSorted List: ", sorted_list)
