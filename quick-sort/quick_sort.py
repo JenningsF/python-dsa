@@ -4,10 +4,9 @@ def swap(list, index1, index2):
     list[index1] = list[index2]
     list[index2] = temp
 
-# pivot helper method to
+# pivot helper method
 def pivot(list, pivot_index, end_index):
     swap_index = pivot_index
-
     for i in range(pivot_index + 1, end_index + 1):
         if list[i] < list[pivot_index]:
             swap_index += 1
@@ -15,16 +14,20 @@ def pivot(list, pivot_index, end_index):
     swap(list, pivot_index, swap_index)
     return swap_index
 
-# quick sort method to sort a list
+# recursive quick sort helper method
+def quick_sort_helper(list, left, right):
+    if left < right:
+        pivot_index = pivot(list, left, right)
+        quick_sort_helper(list, left, pivot_index - 1)
+        quick_sort_helper(list, pivot_index + 1, right)
+    return list
+
+#  quick sort method to sort a list
 def quick_sort(list):
-    pass
+    return quick_sort_helper(list, 0, len(list) - 1)
 
 # test quick sort
 original_list = [4,6,1,7,3,2,5]
 print("Original List: ", original_list)
-# sorted_list = quick_sort(original_list)
-
-# test pivot method
-print(pivot(original_list, 0, 6))
-print("\nPivoyed List: ", original_list)
-# print("\nSorted List: ", sorted_list)
+sorted_list = quick_sort(original_list)
+print("\nSorted List: ", sorted_list)
