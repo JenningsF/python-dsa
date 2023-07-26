@@ -131,16 +131,26 @@ class BinarySearchTree:
                 queue.append(current_node.right)
         return results
 
-    # pre-order depth first search (DFS) that traverses down the left side first
+    # pre-order depth first search (DFS)
     def dfs_pre_order(self):
         results = []
-
         def traverse(current_node):
             results.append(current_node.value)
             if current_node.left is not None:
                 traverse(current_node.left)
             if current_node.right is not None:
                 traverse(current_node.right)
+        traverse(self.root)
+        return results
 
+    # post-order depth first search (DFS)
+    def dfs_post_order(self):
+        results = []
+        def traverse(current_node):
+            if current_node.left is not None:
+                traverse(current_node.left)
+            if current_node.right is not None:
+                traverse(current_node.right)
+            results.append(current_node.value)
         traverse(self.root)
         return results
