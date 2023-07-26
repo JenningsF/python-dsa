@@ -17,7 +17,8 @@ def merge(list1, list2):
         combined.append(list2[j])
         j += 1
     return combined
-
+    
+# merge sort method to sort a list
 def merge_sort(list):
     if len(list) == 1:
         return list
