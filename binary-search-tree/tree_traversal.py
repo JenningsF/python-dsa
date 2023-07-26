@@ -26,3 +26,12 @@ print("\nPost-order DFS List: ", my_tree.dfs_post_order())
 # test in-order DFS method
 # should return [18, 21, 27, 47, 52, 76, 82]
 print("\nIn-order DFS List: ", my_tree.dfs_in_order())
+
+# test kth smallest method
+print("\nkth Smallest Test:")
+# should return 18
+print("The 1st smallest = ", my_tree.kth_smallest(1))
+# should return 27
+print("The 3rd smallest = ", my_tree.kth_smallest(3))
+# should return 76
+print("The 6th smallest = ", my_tree.kth_smallest(6))

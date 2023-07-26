@@ -166,3 +166,21 @@ class BinarySearchTree:
                 traverse(current_node.right)
         traverse(self.root)
         return results
+
+    # find the kth smallest value of the BST
+    def kth_smallest(self, k):
+        stack =[]
+        node = self.root
+
+        while stack or node:
+            while node:
+                stack.append(node)
+                node = node.left
+
+            node = stack.pop()
+            k -= 1
+            if k == 0:
+                return node.value
+
+            node = node.right
+        return None
