@@ -22,3 +22,7 @@ print("\nPre-order DFS List: ", my_tree.dfs_pre_order())
 # test post-order DFS method
 # should return [18, 27, 21, 52, 82, 76, 47]
 print("\nPost-order DFS List: ", my_tree.dfs_post_order())
+
+# test in-order DFS method
+# should return [18, 21, 27, 47, 52, 76, 82]
+print("\nIn-order DFS List: ", my_tree.dfs_in_order())

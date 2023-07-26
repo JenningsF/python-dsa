@@ -154,3 +154,15 @@ class BinarySearchTree:
             results.append(current_node.value)
         traverse(self.root)
         return results
+    
+    # in-order depth first search (DFS)
+    def dfs_in_order(self):
+        results = []
+        def traverse(current_node):
+            if current_node.left is not None:
+                traverse(current_node.left)
+            results.append(current_node.value)
+            if current_node.right is not None:
+                traverse(current_node.right)
+        traverse(self.root)
+        return results
