@@ -12,5 +12,9 @@ my_tree.insert(82)
 
 my_tree.display()
 # test BFS method
-print("\nBFS List: ", my_tree.bfs())
 # should return [47, 21, 76, 18, 27, 52, 82]
+print("\nBFS List: ", my_tree.bfs())
+
+# test pre-order DFS method
+# should return [47, 21, 18, 27, 76, 52, 82]
+print("\nPre-order DFS List: ", my_tree.dfs_pre_order())
